@@ -1,27 +1,47 @@
 {
-  "home.title": "Compétences OpenClaw géniales",
-  "home.subtitle": "Découvrez et installez des compétences pour votre assistant IA",
-  "home.intro": "OpenClaw est un assistant IA qui fonctionne localement et qui peut être étendu avec des compétences créées par la communauté. Parcourez les catégories, recherchez des compétences, obtenez des recommandations et installez en toute sécurité.",
-  "home.cta.browse": "Parcourir les catégories",
-  "home.cta.search": "Rechercher des compétences",
-  "home.cta.recommend": "Obtenir des recommandations",
-  "home.cta.install": "Comment installer",
-  "nav.categories": "Catégories",
-  "nav.recommend": "Recommander",
-  "nav.compare": "Comparer",
-  "nav.export": "Exporter",
-  "nav.about": "À propos",
-  "nav.language": "Langue",
-  "categories.title": "Catégories",
-  "categories.empty": "Aucune catégorie trouvée.",
-  "skill.installTitle": "Installer",
-  "skill.manualTitle": "Installation manuelle",
-  "skill.safetyTitle": "Liste de sécurité",
-  "skill.category": "Catégorie",
-  "search.placeholder": "Rechercher une compétence...",
-  "recommend.title": "Obtenir des recommandations",
-  "compare.title": "Comparer des compétences",
-  "export.title": "Exporter les compétences",
-  "about.title": "À propos de ce site",
-  "about.description": "Ce site reflète le dépôt Awesome OpenClaw Skills. Il aide les non‑programmeurs à découvrir, comparer et installer des compétences. Vérifiez toujours le code et les analyses de sécurité avant d’installer."
+  "home": {
+    "title": "Compétences OpenClaw",
+    "subtitle": "Découvrez et installez des compétences pour votre assistant IA",
+    "intro": "OpenClaw est un assistant IA fonctionnant localement et extensible grâce à des compétences communautaires. Parcourez les catégories, recherchez des compétences, obtenez des recommandations et installez en toute sécurité.",
+    "cta": {
+      "browse": "Parcourir les catégories",
+      "search": "Rechercher des compétences",
+      "recommend": "Obtenir des recommandations",
+      "install": "Comment installer"
+    }
+  },
+  "nav": {
+    "categories": "Catégories",
+    "recommend": "Recommander",
+    "compare": "Comparer",
+    "export": "Exporter",
+    "about": "À propos",
+    "language": "Langue"
+  },
+  "categories": {
+    "title": "Catégories",
+    "empty": "Aucune catégorie trouvée."
+  },
+  "skill": {
+    "installTitle": "Installer",
+    "manualTitle": "Installation manuelle",
+    "safetyTitle": "Liste de sécurité",
+    "category": "Catégorie"
+  },
+  "search": {
+    "placeholder": "Rechercher une compétence..."
+  },
+  "recommend": {
+    "title": "Obtenir des recommandations"
+  },
+  "compare": {
+    "title": "Comparer les compétences"
+  },
+  "export": {
+    "title": "Exporter les compétences"
+  },
+  "about": {
+    "title": "À propos de ce site",
+    "description": "Ce site reflète le dépôt Awesome OpenClaw Skills et aide les non-développeurs à découvrir, comparer et installer des compétences. Vérifiez toujours le code avant l’installation."
+  }
 }
