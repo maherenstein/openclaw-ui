@@ -1,27 +1,47 @@
 {
-  "home.title": "Awesome OpenClaw Skills",
-  "home.subtitle": "Discover and install skills for your AI assistant",
-  "home.intro": "OpenClaw is a locally running AI assistant that can be extended with community‑built skills. Browse categories, search for skills, get recommendations and install safely.",
-  "home.cta.browse": "Browse categories",
-  "home.cta.search": "Search skills",
-  "home.cta.recommend": "Get recommendations",
-  "home.cta.install": "How to install",
-  "nav.categories": "Categories",
-  "nav.recommend": "Recommend",
-  "nav.compare": "Compare",
-  "nav.export": "Export",
-  "nav.about": "About",
-  "nav.language": "Language",
-  "categories.title": "Categories",
-  "categories.empty": "No categories found.",
-  "skill.installTitle": "Install",
-  "skill.manualTitle": "Manual installation",
-  "skill.safetyTitle": "Safety checklist",
-  "skill.category": "Category",
-  "search.placeholder": "Search skills...",
-  "recommend.title": "Get Recommendations",
-  "compare.title": "Compare Skills",
-  "export.title": "Export Skills",
-  "about.title": "About this site",
-  "about.description": "This website mirrors the Awesome OpenClaw Skills repository. It helps non‑coders discover, compare and install skills. Always review code and security scans before installing."
+  "home": {
+    "title": "Awesome OpenClaw Skills",
+    "subtitle": "Discover and install skills for your AI assistant",
+    "intro": "OpenClaw is a locally running AI assistant that can be extended with community-built skills. Browse categories, search for skills, get recommendations and install safely.",
+    "cta": {
+      "browse": "Browse categories",
+      "search": "Search skills",
+      "recommend": "Get recommendations",
+      "install": "How to install"
+    }
+  },
+  "nav": {
+    "categories": "Categories",
+    "recommend": "Recommend",
+    "compare": "Compare",
+    "export": "Export",
+    "about": "About",
+    "language": "Language"
+  },
+  "categories": {
+    "title": "Categories",
+    "empty": "No categories found."
+  },
+  "skill": {
+    "installTitle": "Install",
+    "manualTitle": "Manual installation",
+    "safetyTitle": "Safety checklist",
+    "category": "Category"
+  },
+  "search": {
+    "placeholder": "Search skills..."
+  },
+  "recommend": {
+    "title": "Get Recommendations"
+  },
+  "compare": {
+    "title": "Compare Skills"
+  },
+  "export": {
+    "title": "Export Skills"
+  },
+  "about": {
+    "title": "About this site",
+    "description": "This website mirrors the Awesome OpenClaw Skills repository. It helps non-coders discover, compare and install skills. Always review code and security scans before installing."
+  }
 }
