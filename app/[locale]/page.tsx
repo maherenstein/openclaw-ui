@@ -1,45 +1,47 @@
-"use client";
-
-import Header from "../../components/Header";
 import Link from "next/link";
-import {useLocale, useTranslations} from "next-intl";
+import Header from "../../components/Header";
+import {getTranslations} from "next-intl/server";
 
-export default function HomePage() {
-  const t = useTranslations();
-  const locale = useLocale();
+export default async function HomePage() {
+  const t = await getTranslations();
 
   return (
     <>
       <Header />
-      <main className="flex-1 max-w-5xl mx-auto px-4 py-8 space-y-8">
-        <h1 className="text-3xl font-semibold">{t("home.subtitle")}</h1>
-        <p className="text-gray-700 leading-relaxed">{t("home.intro")}</p>
+      <main className="max-w-5xl mx-auto px-6 py-12 space-y-8">
+        <h1 className="text-3xl font-semibold">
+          {t("home.subtitle")}
+        </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <p className="text-gray-700 leading-relaxed">
+          {t("home.intro")}
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
-            href={`/${locale}/categories`}
-            className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded text-center"
+            href="/categories"
+            className="rounded-lg bg-blue-600 px-5 py-3 text-center text-white hover:bg-blue-700"
           >
             {t("home.cta.browse")}
           </Link>
 
           <Link
-            href={`/${locale}/search`}
-            className="block bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded text-center"
+            href="/search"
+            className="rounded-lg bg-green-600 px-5 py-3 text-center text-white hover:bg-green-700"
           >
             {t("home.cta.search")}
           </Link>
 
           <Link
-            href={`/${locale}/recommend`}
-            className="block bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded text-center"
+            href="/recommend"
+            className="rounded-lg bg-purple-600 px-5 py-3 text-center text-white hover:bg-purple-700"
           >
             {t("home.cta.recommend")}
           </Link>
 
           <Link
-            href={`/${locale}/about`}
-            className="block bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-3 rounded text-center"
+            href="/about"
+            className="rounded-lg bg-yellow-600 px-5 py-3 text-center text-white hover:bg-yellow-700"
           >
             {t("home.cta.install")}
           </Link>
