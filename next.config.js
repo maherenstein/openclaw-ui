@@ -1,13 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true
-  },
-  i18n: {
-    locales: ["en", "ar", "fr"],
-    defaultLocale: "en",
-    localeDetection: true
-  }
-};
-
+const nextConfig = {};
 module.exports = nextConfig;
