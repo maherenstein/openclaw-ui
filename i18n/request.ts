@@ -1,13 +1,7 @@
-import {getRequestConfig} from "next-intl/server";
-
-const locales = ["en", "ar", "fr"] as const;
+import {getRequestConfig} from 'next-intl/server';
 
 export default getRequestConfig(async ({requestLocale}) => {
-  let locale = await requestLocale;
-
-  if (!locale || !locales.includes(locale as any)) {
-    locale = "en";
-  }
+  const locale = (await requestLocale) || 'en';
 
   return {
     locale,
