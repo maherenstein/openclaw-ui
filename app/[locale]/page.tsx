@@ -5,8 +5,10 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const t = useTranslations();
-  const locale = t.locale;
+ import {useLocale, useTranslations} from 'next-intl';
+
+const t = useTranslations();
+const locale = useLocale();
   return (
     <>
       <Header />
