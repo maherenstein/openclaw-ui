@@ -1,15 +1,9 @@
-import '../globals.css';
-import { NextIntlClientProvider } from 'next-intl';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import "../globals.css";
+import {NextIntlClientProvider} from "next-intl";
+import {getMessages, setRequestLocale} from "next-intl/server";
+import {notFound} from "next/navigation";
 
-// Define supported locales.  If a user navigates to an unsupported locale
-// segment, fall back to a 404.
-const SUPPORTED_LOCALES = ['en', 'ar', 'fr'] as const;
-export const metadata: Metadata = {
-  title: 'Awesome OpenClaw Skills',
-  description: 'Discover and install skills for your OpenClaw assistant'
-};
+const SUPPORTED = ["en", "ar", "fr"] as const;
 
 export default async function LocaleLayout({
   children,
@@ -18,23 +12,19 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = params;
-  if (!SUPPORTED_LOCALES.includes(locale as any)) {
-    // Show 404 for unknown locales
-    notFound();
-  }
-  // Dynamically import translation messages for the given locale
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (err) {
-    notFound();
-  }
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const {locale} = params;
+
+  if (!SUPPORTED.includes(locale as any)) notFound();
+
+  setRequestLocale(locale);
+
+  // ✅ next-intl will call i18n/request.ts and return messages
+  const messages = await getMessages();
+
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
-        <NextIntlClientProvider locale={locale} messages={messages}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+      <body className="min-h-screen bg-gray-50 text-gray-900">
+        <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
