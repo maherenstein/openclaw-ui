@@ -1,17 +1,5 @@
-/*const createNextIntlPlugin = require('next-intl/plugin');
-//
-//const withNextIntl = createNextIntlPlugin();
+const createNextIntlPlugin = require('next-intl/plugin');
 
-module.exports = withNextIntl({
-  // Your Next.js config here (can be empty for now)
-});
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
-
-===
-*/
-
-const nextIntl = require('next-intl/plugin')();
-
-module.exports = nextIntl({
-  reactStrictMode: true,
-});
+module.exports = withNextIntl({});
